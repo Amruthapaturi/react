@@ -1,0 +1,16 @@
+SPA 
+jsx
+virtual DOM
+
+Components -- Building Blocks of react
+Props -- passing the Data from one component to other component
+State -- Application From one state to other 
+
+Array higher order function
+map
+reduce
+find 
+filter
+every
+some
+foreach
