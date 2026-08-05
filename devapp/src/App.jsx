@@ -8,6 +8,7 @@ import Search from './Hooks/Search'
 import UseEffect from './Hooks/UseEffect'
 import Clock from './Hooks/Clock'
 import UseRef from './Hooks/UseRef'
+import Prevcount from './Hooks/Prevcount'
 
 const App = () => {
   return (
@@ -20,7 +21,8 @@ const App = () => {
       {/* <Search/> */}
       {/* <UseEffect/> */}
       {/* <Clock/> */}
-      <UseRef/>
+      {/* <UseRef/> */}
+      <Prevcount/>
     </div>
   )
 }
