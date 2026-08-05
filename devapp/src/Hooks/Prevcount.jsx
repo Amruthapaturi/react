@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 
 const Prevcount = () => {
     const[count , setCount]= useState(100)
-   const prevCount = useRef()
+   const prevCount = useRef([])
    const currentRef = useRef(null)
 
 // currentRef.current++
@@ -13,15 +13,27 @@ const Prevcount = () => {
    })
 
    useEffect(()=>{
-    prevCount.current = count
+    prevCount.current.push(count)
    },[count])
-   console.log(prevCount.current)
-
-   
+   console.log(prevCount.current) 
   return (
     <div>
-      <p>Count is {count}</p> 101
-      <p>Previous Count is {prevCount.current}</p>
+      <p>Count is {count}</p> 
+      <p>Previous Count is </p>
+      <div>
+          {
+          prevCount.current.map((value)=>{
+            return(
+                <>
+                <p>{value}</p>
+                </>
+            )
+          })
+          }
+      </div>
+
+
+      
       <button onClick={()=>setCount((prev)=>prev+1)}>Inc</button> 
     </div>
   )
