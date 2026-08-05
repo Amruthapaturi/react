@@ -12,6 +12,8 @@ import Prevcount from './Hooks/Prevcount'
 import TimerRef from './Hooks/TimerRef'
 import Home from './Home'
 import Video from './Hooks/Video'
+import UseMemo from './Hooks/UseMemo'
+import ParentCallback from './Hooks/ParentCallback'
 import {BrowserRouter , Routes , Route} from 'react-router-dom'
 
 const App = () => {
@@ -34,6 +36,8 @@ const App = () => {
         <Route path='/timeref' element={<TimerRef/>} />
         <Route path='/prev/count' element={<Prevcount/>}/>
         <Route path='/video' element={<Video/>}/>
+        <Route path='/usememo' element={<UseMemo/>}/>
+        <Route path='/callback' element={<ParentCallback/>} />
       </Routes>
       </BrowserRouter>
   
