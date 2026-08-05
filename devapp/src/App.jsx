@@ -14,14 +14,15 @@ import Home from './Home'
 import Video from './Hooks/Video'
 import UseMemo from './Hooks/UseMemo'
 import ParentCallback from './Hooks/ParentCallback'
+import UseLayoutEffect from './Hooks/UseLayoutEffect'
 import {BrowserRouter , Routes , Route} from 'react-router-dom'
+import UseSearch from './Hooks/UseSearch'
 
 const App = () => {
   return (
     <div>
       {/* <App1/> */}
       {/* <Cart/> */}
-      {/* <UseState/> */}
       {/* <UseState1/> */}
       {/* <Form/> */}
       {/* <Search/> */}
@@ -38,6 +39,9 @@ const App = () => {
         <Route path='/video' element={<Video/>}/>
         <Route path='/usememo' element={<UseMemo/>}/>
         <Route path='/callback' element={<ParentCallback/>} />
+        <Route path='/state' element={<UseState/>}/>
+        <Route path='/layout' element={<UseLayoutEffect/>}/>
+        <Route path='/search' element={<UseSearch/>}/>
       </Routes>
       </BrowserRouter>
   

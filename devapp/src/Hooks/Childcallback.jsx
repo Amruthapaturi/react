@@ -8,6 +8,6 @@ const Childcallback = React.memo(({clicks})=>{
 <button onClick={clicks}>Say Hello</button>
         </>
     )
-})
+}) 
 
 export default Childcallback
