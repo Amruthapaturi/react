@@ -11,6 +11,7 @@ import UseRef from './Hooks/UseRef'
 import Prevcount from './Hooks/Prevcount'
 import TimerRef from './Hooks/TimerRef'
 import Home from './Home'
+import Video from './Hooks/Video'
 import {BrowserRouter , Routes , Route} from 'react-router-dom'
 
 const App = () => {
@@ -32,6 +33,7 @@ const App = () => {
         <Route path='/' element={<Home/>}/>
         <Route path='/timeref' element={<TimerRef/>} />
         <Route path='/prev/count' element={<Prevcount/>}/>
+        <Route path='/video' element={<Video/>}/>
       </Routes>
       </BrowserRouter>
   
