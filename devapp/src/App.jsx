@@ -9,6 +9,9 @@ import UseEffect from './Hooks/UseEffect'
 import Clock from './Hooks/Clock'
 import UseRef from './Hooks/UseRef'
 import Prevcount from './Hooks/Prevcount'
+import TimerRef from './Hooks/TimerRef'
+import Home from './Home'
+import {BrowserRouter , Routes , Route} from 'react-router-dom'
 
 const App = () => {
   return (
@@ -22,7 +25,16 @@ const App = () => {
       {/* <UseEffect/> */}
       {/* <Clock/> */}
       {/* <UseRef/> */}
-      <Prevcount/>
+      {/* <Prevcount/> */}
+
+      <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/timeref' element={<TimerRef/>} />
+        <Route path='/prev/count' element={<Prevcount/>}/>
+      </Routes>
+      </BrowserRouter>
+  
     </div>
   )
 }
