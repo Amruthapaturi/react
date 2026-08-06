@@ -1,18 +1,17 @@
 import { createContext } from "react";
 
+export const NameContext = createContext()
 
-export const LandContext = createContext()
+export const NameProvide =({children})=>{
 
-export const LandProvide = ({children})=>{
-
-const land = "10 Acres"
-const hello =()=>{
-    alert("Hello")
+const sname = "Bharath Reddy"
+const greet =()=>{
+    alert("Hello Good Afternoon")
 }
 
-return(
-        <LandContext.Provider value={{land,hello}}>
-{children}
-    </LandContext.Provider>
-)
+    return(
+        <NameContext.Provider value={{sname , greet}}>
+          {children}
+        </NameContext.Provider>
+    )
 }

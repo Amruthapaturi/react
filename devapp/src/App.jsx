@@ -34,6 +34,7 @@ const App = () => {
 
       <BrowserRouter>
       <Routes>
+        <Route path='/form' element={<Form/>} />
         <Route path='/' element={<GrandParent/>}/>
         <Route path='student' element={<Dashboard/>}/>
         <Route path='/counter' element={<Counter/>}/>

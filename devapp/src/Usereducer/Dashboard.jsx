@@ -4,10 +4,11 @@ import Marks from './Marks'
 import Ateendence from './Ateendence'
 import Profile from './Profile'
 import Projects from './Projects'
-import { LandContext } from '../ContextAPI/LandContext'
+import { ThemeContext } from '../ContextAPI/ThemeContext'
+
 
 const Dashboard = () => {
-    const land = useContext(LandContext)
+    const {theme , toggleTheme}=useContext(ThemeContext)
 
     const initialState ={
         activePage:"Profile"
@@ -44,10 +45,11 @@ const Dashboard = () => {
 
 
   return (
-    <div className='comp'>
+    <div className='comp'  style={{backgroundColor:theme ==="light"?"black":"white" , color:theme==="light"?"white":"black"}}>
+      <button onClick={toggleTheme}>Toggle Theme</button>
       <div className='side'>
         side bar <br />
-        <p>{land}</p>
+
 <div style={{display:"block"}}>
     
         <button onClick={()=>dispatch({type:"Projects"})}>Projects</button> <br />

@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
+import { useContext } from 'react'
+import { NameContext } from '../ContextAPI/LandContext'
 
 const Form = () => {
+  const {sname , greet} = useContext(NameContext)
   const[name ,setName]= useState("")
   const[email , setEmail] = useState("")
   const[password , setPassword] = useState("")
@@ -24,6 +27,7 @@ const Form = () => {
   return (
     <div>
       <h2>This is Signup form</h2>
+      <p>{sname}</p>
       <form action="" onSubmit={submitData}>
 
         <label htmlFor="">Name : </label>
