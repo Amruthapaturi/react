@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Parent from './Parent'
+import { LandContext } from '../ContextAPI/LandContext'
 
 const GrandParent = () => {
-    const land = "10 Acres"
+    const {land , hello} = useContext(LandContext)
   return (
     <div>
       <Parent assets={land}/>

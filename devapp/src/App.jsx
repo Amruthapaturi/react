@@ -17,6 +17,8 @@ import UseLayoutEffect from './Hooks/UseLayoutEffect'
 import {BrowserRouter , Routes , Route} from 'react-router-dom'
 import UseSearch from './Hooks/UseSearch'
 import Counter from './Hooks/Counter'
+import Dashboard from './Usereducer/Dashboard'
+import GrandParent from './PropsDrilling/GrandParent'
 
 const App = () => {
   return (
@@ -32,7 +34,8 @@ const App = () => {
 
       <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home/>}/>
+        <Route path='/' element={<GrandParent/>}/>
+        <Route path='student' element={<Dashboard/>}/>
         <Route path='/counter' element={<Counter/>}/>
         <Route path='/effect' element={<UseEffect/>}/>
         <Route path='/timeref' element={<TimerRef/>} />
