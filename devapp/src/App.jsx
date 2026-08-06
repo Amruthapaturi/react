@@ -1,6 +1,5 @@
 import React from 'react'
 import App1 from './App1'
-import Cart from './Cart'
 import UseState from './Hooks/UseState'
 import UseState1 from './Hooks/UseState1'
 import Form from './Hooks/Form'
@@ -17,6 +16,7 @@ import ParentCallback from './Hooks/ParentCallback'
 import UseLayoutEffect from './Hooks/UseLayoutEffect'
 import {BrowserRouter , Routes , Route} from 'react-router-dom'
 import UseSearch from './Hooks/UseSearch'
+import Counter from './Hooks/Counter'
 
 const App = () => {
   return (
@@ -26,7 +26,6 @@ const App = () => {
       {/* <UseState1/> */}
       {/* <Form/> */}
       {/* <Search/> */}
-      {/* <UseEffect/> */}
       {/* <Clock/> */}
       {/* <UseRef/> */}
       {/* <Prevcount/> */}
@@ -34,6 +33,8 @@ const App = () => {
       <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path='/counter' element={<Counter/>}/>
+        <Route path='/effect' element={<UseEffect/>}/>
         <Route path='/timeref' element={<TimerRef/>} />
         <Route path='/prev/count' element={<Prevcount/>}/>
         <Route path='/video' element={<Video/>}/>

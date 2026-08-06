@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react'
+import axios from 'axios'
+import {ToastContainer , toast} from 'react-toastify'
 
 const UseEffect = () => {
 const [data,setData]= useState([])
@@ -6,16 +8,29 @@ const [search ,setSearch]= useState("")
 
 
 
+// useEffect(()=>{
+//     fetch('https://jsonplaceholder.typicode.com/users')
+//     .then(res=>res.json())
+//     .then((data1)=>
+//     setData(data1))
+// },[])
+
+const fetchData =async()=>{
+try {
+  const users = await axios.get('https://jsonplaceholder.typicode.com/users')
+  setData(users.data)
+} catch (error) {
+  console.log(error)
+}
+}
+
 useEffect(()=>{
-    fetch('https://jsonplaceholder.typicode.com/users')
-    .then(res=>res.json())
-    .then((data1)=>
-    setData(data1))
+  fetchData()
 },[])
  
-const filterdUsers = data.filter((user)=>{
-user.toLowerCase()
-})
+// const filterdUsers = data.filter((user)=>{
+// user.toLowerCase()
+// })
 
   return (
     <div>
@@ -26,7 +41,7 @@ user.toLowerCase()
         onChange={(e)=>setSearch(e.target.value)}
         />
       {
-        filterdUsers.map((user)=>{
+        data.map((user)=>{
          return(
             <>
             <p>{user.name} - {user.email} - {user.address.city}</p>
@@ -34,6 +49,9 @@ user.toLowerCase()
          )
         })
       }
+
+      <button onClick={()=>toast.warn("Clicked Sucessfully")}>Sucess</button>
+    <ToastContainer/>
     </div>
   )
 }
