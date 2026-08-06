@@ -19,6 +19,7 @@ import UseSearch from './Hooks/UseSearch'
 import Counter from './Hooks/Counter'
 import Dashboard from './Usereducer/Dashboard'
 import GrandParent from './PropsDrilling/GrandParent'
+import ProductsList from './Ecommerce/ProductsList'
 
 const App = () => {
   return (
@@ -34,6 +35,7 @@ const App = () => {
 
       <BrowserRouter>
       <Routes>
+        <Route path='/products' element={<ProductsList/>}/>
         <Route path='/form' element={<Form/>} />
         <Route path='/' element={<GrandParent/>}/>
         <Route path='student' element={<Dashboard/>}/>
