@@ -2,10 +2,11 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './pages/header/header';
 import { Navbar } from './pages/navbar/navbar';
+import { Fetchdata } from './pages/fetchdata/fetchdata';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet , Header , Navbar],
+  imports: [RouterOutlet , Header , Navbar , Fetchdata],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
