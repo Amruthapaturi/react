@@ -11,4 +11,17 @@ import { Navbar } from './pages/navbar/navbar';
 })
 export class App {
  title =signal('Welcome to First Angular Class')
+
+ initialState:any = true
+
+ count:number = 0
+
+ Inc(){
+  this.count = this.count+2
+ }
+
+ handleClick(){
+  this.initialState = this.initialState?"Hello Welcome to Event Listeners and functions":"ghdvdsghfghcHAc"
+ }
+
 }

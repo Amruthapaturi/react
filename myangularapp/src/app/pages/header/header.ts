@@ -7,5 +7,5 @@ import { Component, input, signal } from '@angular/core';
   styleUrl: './header.css',
 })
 export class Header {
-message = input('')
+message = input()
 }

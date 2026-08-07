@@ -1,7 +1,9 @@
 
 
 <p>{{title()}}</p>
-<app-header [message]="title()" />
-<app-navbar/>
+<button (click)="handleClick()">Add Text</button>
+<p>{{initialState}}</p>
 
+<p>Count is {{count}}</p>
+<button (click)="Inc()">Inc</button>
 <router-outlet />
