@@ -1,17 +1,21 @@
-import { Component, signal } from '@angular/core';
+import { Component, Pipe, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Header } from './pages/header/header';
 import { Navbar } from './pages/navbar/navbar';
+import { Home } from './pages/home/home';
 import { Fetchdata } from './pages/fetchdata/fetchdata';
+import { LowerCasePipe , UpperCasePipe , TitleCasePipe , CurrencyPipe} from '@angular/common';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet , Header , Navbar , Fetchdata],
+  imports: [RouterOutlet, Fetchdata, LowerCasePipe, UpperCasePipe, TitleCasePipe, CurrencyPipe, Home],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
- title =signal('Welcome to First Angular Class')
+ title =('Welcome to First Angular Class')
+ money =(20)
 
  initialState:any = true
 
